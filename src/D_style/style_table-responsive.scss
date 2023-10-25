@@ -1,3 +1,30 @@
+// *{
+//     border: solid;
+// }
+
 body{
 
+}
+
+.tableau{
+    border: solid 1px red;
+    position: relative;
+    
+    table{
+        border-collapse: collapse;
+    }
+}
+
+
+td{
+    width: 80px;
+    height: 80px;
+    border: solid blue;
+}
+
+.barre_scroll{
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border: solid green;
 }
