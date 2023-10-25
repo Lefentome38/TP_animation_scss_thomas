@@ -1,10 +1,16 @@
-@mixin animation-loeder () {
-    @keyframes loeder-carre {
-        0% {
-          transform: rotate(0deg);
-        }
+@mixin animation-rotation() {
+    @keyframes rotation360 {
         100% {
             transform: rotate(360deg);
         }
       }
+}
+
+@mixin textBoum() {
+    @keyframes text-animation {
+        50%{
+            color: blue;
+            transform: scale(2);
+        }
+    }
 }
