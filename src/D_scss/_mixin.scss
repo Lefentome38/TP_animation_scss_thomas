@@ -1,0 +1,13 @@
+@mixin animation-loeder () {
+    @keyframes loeder-carre {
+        0% {
+          rotate: 0deg;
+        }
+        50% {
+          rotate: 180deg;
+        }
+        100% {
+          rotate: 360deg;
+        }
+      }
+}
