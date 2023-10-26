@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // *{
 //     border: solid;
 // }
@@ -6,25 +8,108 @@ body{
 
 }
 
-.tableau{
+.tableau1{
+    margin-top: 10px;
     border: solid 1px red;
     position: relative;
-    
     table{
         border-collapse: collapse;
+    }
+    td{
+        min-width: 80px;
+        height: 80px;
+        border: solid blue;
+    }
+}
+
+@media (max-width: 856px) {
+    .tableau1{
+        overflow: auto;    
     }
 }
 
 
-td{
-    width: 80px;
-    height: 80px;
-    border: solid blue;
+
+.tableau2{
+    margin-top: 10px;
+    border: solid 1px red;
+    position: relative;
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        min-width: 80px;
+        height: 80px;
+        border: solid green;
+    }
+
+    @media (max-width: 856px) {
+        .div_delete10{
+            display: none;
+        }
+    }
+    @media (max-width: (770px)) {
+        .div_delete9 {
+            display: none;
+        }
+    }
+    @media (max-width: (682px)) {
+        .div_delete8 {
+            display: none;
+        }
+    }
+    @media (max-width: (605px)) {
+        .div_delete7 {
+            display: none;
+        }
+    }
+    @media (max-width: (518px)) {
+        .div_delete6 {
+            display: none;
+        }
+    }
+    @media (max-width: (433px)) {
+        .div_delete5 {
+            display: none;
+        }
+    }
+    @media (max-width: (350px)) {
+        .div_delete4 {
+            display: none;
+        }
+        .tableau2{
+            overflow: auto;    
+        }
+    }
+    
 }
 
-.barre_scroll{
-    width: 40px;
-    height: 40px;
-    background-color: gray;
-    border: solid green;
+.tableau3{
+    margin-top: 10px;
+    border: solid 1px red;
+    position: relative;
+    table{
+        border-collapse: collapse;
+    }
+    td{
+        min-width: 80px;
+        height: 80px;
+        border: solid blue;
+    }
+    @media (max-width: (375px)) {
+        @for $i from 2 through 10 {
+            .div_delete#{$i} {
+              display: none;
+            }
+        }
+        td{
+            width: 1000px;
+        }
+    }
+}
+@media (max-width: 856px) and (min-width:375px) {
+    .tableau3{
+        overflow: auto;    
+    }
+
 }
